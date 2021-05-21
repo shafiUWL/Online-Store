@@ -6,10 +6,12 @@ import {Route, BrowserRouter as Router, Switch, Link} from "react-router-dom";
 import tempPage from './Payment Components/tempPage';
 import Home from './Pages/Home'
 import Products from './components/panos/Products'
-/** 
-import StripeContainer from './Payment Components/StripeContainer';
-import orange from './TempImages/orange.jpg'
-*/
+import LoginPage from './components/panos/LoginPage'
+import RegisterPage from './components/panos/RegisterPage'
+import Payment from './Payment Components/Payment'; 
+
+
+
 
 
 /** 
@@ -44,6 +46,10 @@ function App () {
           <li><Link to="/tempPage">Temp Page</Link></li>
           <li><Link to="/Compare">Compare</Link></li>
           <li><Link to="/Products">Products</Link></li>
+          <li><Link to="/LoginPage">Log in</Link></li>
+          <li><Link to="/RegisterPage">Register</Link></li>
+          <li><Link to="/Payment">Test of payment method</Link></li>
+          
         </ul>
       </nav>
     <Switch>
@@ -51,31 +57,13 @@ function App () {
     <Route path="/tempPage" component = {tempPage}/>
     <Route path="/Compare" component = {Compare}/>
     <Route path="/Products" component = {Products}/>
+    <Route path="/LoginPage" component = {LoginPage}/>
+    <Route path="/RegisterPage" component = {RegisterPage}/>
+    <Route path="/Payment" component = {Payment}/>
     </Switch>
     </div>
   </Router>
 )
 }
 
-
-/** Note this is being developed right now, and I will delete all my useless code
- 
- 
-function App(){
-  const[showItem, setShowItem] = useState(false)
-  return (
-    <div>
-      <h1>The Compare component</h1>
-        <p>Details and notes can be found within source code src/components/panos/compare</p>
-        <Compare/>
-      <h1>Payment Function</h1>
-
-      {showItem ? <StripeContainer/> : <> <h3>£10.00</h3> <img src={orange} alt="Orange" /><button onClick={() => setShowItem(true)}>Purchase Item</button></>}
-      
-
-    </div>
-
-  )
-}
-*/
 export default App;
