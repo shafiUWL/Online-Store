@@ -11,35 +11,40 @@ import RegisterPage from './components/panos/RegisterPage'
 import Payment from './Payment Components/Payment'; 
 
 
+import HomeScreen from "./Pages/HomeScreen";
+import ProductScreen from "./Pages/ProductScreen";
 
 
 
-/** 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Online Shop</h1>
-        </header>
-        <h1>The Compare component</h1>
-        <p>Details and notes can be found within source code src/components/panos/compare</p>
-        <Compare/>
-        
-      </div>
-    );
-  }
-}
-*/
-/** Routing will be completed later
- * */
 
-/**type this into terminal: npm install react-router-dom */
 function App () {
   return(
+    
   <Router>
 
-    <div className="container">
+<Switch>
+    <Route path="/" exact component = {Home}/>
+    <Route path="/tempPage" component = {tempPage}/>
+    <Route path="/Compare" component = {Compare}/>
+    <Route path="/Products" component = {Products}/>
+    <Route path="/LoginPage" component = {LoginPage}/>
+    <Route path="/RegisterPage" component = {RegisterPage}/>
+    <Route path="/Payment" component = {Payment}/>
+    </Switch>
+
+<div className="grid-container">
+        <header className="row">
+          <div>
+            <a className="brand" href="/">
+              The Grocery Store
+            </a>
+          </div>
+         
+        
+          
+        </header>
+        <main>
+        <div className="container">
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -52,16 +57,15 @@ function App () {
           
         </ul>
       </nav>
-    <Switch>
-    <Route path="/" exact component = {Home}/>
-    <Route path="/tempPage" component = {tempPage}/>
-    <Route path="/Compare" component = {Compare}/>
-    <Route path="/Products" component = {Products}/>
-    <Route path="/LoginPage" component = {LoginPage}/>
-    <Route path="/RegisterPage" component = {RegisterPage}/>
-    <Route path="/Payment" component = {Payment}/>
-    </Switch>
+    
     </div>
+          <Route path="/product/:id" component={ProductScreen}></Route>
+          <Route path="/" component={HomeScreen} exact></Route>
+        </main>
+        <footer className="row center"> All Rights Reserved</footer>
+      </div>
+
+    
   </Router>
 )
 }
