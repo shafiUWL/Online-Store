@@ -6,6 +6,9 @@ import {Route, BrowserRouter as Router, Switch, Link} from "react-router-dom";
 import tempPage from './Payment Components/tempPage';
 import Home from './Pages/Home'
 import Products from './components/panos/Products'
+import LoginPage from './components/panos/LoginPage'
+import RegisterPage from './components/panos/RegisterPage'
+
 /** 
 import StripeContainer from './Payment Components/StripeContainer';
 import orange from './TempImages/orange.jpg'
@@ -44,6 +47,9 @@ function App () {
           <li><Link to="/tempPage">Temp Page</Link></li>
           <li><Link to="/Compare">Compare</Link></li>
           <li><Link to="/Products">Products</Link></li>
+          <li><Link to="/LoginPage">Log in</Link></li>
+          <li><Link to="/RegisterPage">Register</Link></li>
+          
         </ul>
       </nav>
     <Switch>
@@ -51,6 +57,8 @@ function App () {
     <Route path="/tempPage" component = {tempPage}/>
     <Route path="/Compare" component = {Compare}/>
     <Route path="/Products" component = {Products}/>
+    <Route path="/LoginPage" component = {LoginPage}/>
+    <Route path="/RegisterPage" component = {RegisterPage}/>
     </Switch>
     </div>
   </Router>
