@@ -1,4 +1,4 @@
-import { Form, FormGroup, Label, Input } from 'reactstrap'
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import React from 'react'
 import './LoginRegister.css'
 
@@ -21,7 +21,7 @@ function LoginPage() {
             </div>
             <div className='text-center'>
                 <p className='p'>Don't have an account?  </p>
-                <a href='http://localhost:3000/RegisterPage'>Sign up</a>
+                <a href='https://www.youtube.com/watch?v=Nj16V10FXJo'>Sign up</a>
             </div>
         </Form>
     )
