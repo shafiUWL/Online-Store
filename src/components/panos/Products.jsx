@@ -23,6 +23,7 @@ function Products() {
                         <Product product = {product}/>
                     </Grid>
                 ))}
+                
             </Grid>
         </main>
     )

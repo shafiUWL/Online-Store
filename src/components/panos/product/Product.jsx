@@ -21,6 +21,7 @@ function Product({ product }) {
                 <div>
                     <Typography variant='h5' gutterBottom>
                         {product.name}
+                       
                     </Typography>                
                 </div>
             </CardContent>
