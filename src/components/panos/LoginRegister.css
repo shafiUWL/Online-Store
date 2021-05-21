@@ -1,0 +1,13 @@
+.login-form {
+  width:100%;
+  max-width: 330px;
+  padding: 15;
+  margin: auto;
+  height: 100%;
+}
+.p{
+  display:inline
+}
+.a{
+  display:inline
+}
