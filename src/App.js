@@ -8,11 +8,10 @@ import Home from './Pages/Home'
 import Products from './components/panos/Products'
 import LoginPage from './components/panos/LoginPage'
 import RegisterPage from './components/panos/RegisterPage'
+import Payment from './Payment Components/Payment'; 
 
-/** 
-import StripeContainer from './Payment Components/StripeContainer';
-import orange from './TempImages/orange.jpg'
-*/
+
+
 
 
 /** 
@@ -49,6 +48,7 @@ function App () {
           <li><Link to="/Products">Products</Link></li>
           <li><Link to="/LoginPage">Log in</Link></li>
           <li><Link to="/RegisterPage">Register</Link></li>
+          <li><Link to="/Payment">Test of payment method</Link></li>
           
         </ul>
       </nav>
@@ -59,6 +59,7 @@ function App () {
     <Route path="/Products" component = {Products}/>
     <Route path="/LoginPage" component = {LoginPage}/>
     <Route path="/RegisterPage" component = {RegisterPage}/>
+    <Route path="/Payment" component = {Payment}/>
     </Switch>
     </div>
   </Router>
