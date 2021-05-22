@@ -1,12 +1,12 @@
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import React from 'react'
 import './LoginRegister.css'
-import { Form, FormGroup, Label, Input } from 'reactstrap'
 
-function RegisterPage() {
+function LoginPage() {
     return (
         <Form className='login-form'>
             <h1 className='text-center'>Website.com</h1>
-            <h3 className='text-center'>Sign up</h3>
+            <h3 className='text-center'>Log in</h3>
             <FormGroup>
                 <Label>Email</Label>
                 <Input type='email' placeholder='Email' />
@@ -15,20 +15,16 @@ function RegisterPage() {
                 <Label>Password</Label>
                 <Input type='password' placeholder='Password' />
             </FormGroup>
-            <FormGroup>
-                <Label>Confirm password</Label>
-                <Input type='password' placeholder='Confirm password' />
-            </FormGroup>
             <br/>
             <div class="d-grid gap-2 col-12 mx-auto">
-                <button class="btn btn-success btn-lg" type="button">Sign up</button>
+                <button class="btn btn-success btn-lg" type="button">Log in</button>
             </div>
             <div className='text-center'>
-                <p className='p'>Already have an account?  </p>
-                <a href='http://localhost:3000/LoginPage'>Log in</a>
+                <p className='p'>Don't have an account?  </p>
+                <a href='https://www.youtube.com/watch?v=Nj16V10FXJo'>Sign up</a>
             </div>
         </Form>
     )
 }
 
-export default RegisterPage
+export default LoginPage
