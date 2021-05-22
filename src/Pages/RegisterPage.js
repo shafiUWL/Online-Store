@@ -25,7 +25,7 @@ function RegisterPage() {
             </div>
             <div className='text-center'>
                 <p className='p'>Already have an account?  </p>
-                <a href='https://www.youtube.com/watch?v=E3Pv4c4Qz9w'>Log in</a>
+                <a href='http://localhost:3000/LoginPage'>Log in</a>
             </div>
         </Form>
     )
