@@ -7,9 +7,9 @@ import {Route, BrowserRouter as Router, Switch, Link} from "react-router-dom";
 
 import LoginPage from './Pages/LoginPage'
 import RegisterPage from './Pages/RegisterPage'
+import Payment from './Pages/Payment'; 
 
 /** 
-import Payment from './Payment Components/Payment'; 
 <Route path="/Payment" component = {Payment}/>
  */
  
@@ -22,11 +22,7 @@ function App () {
     
   <Router>
  
-<Switch>
-    <Route path="/Compare" component = {Compare}/>
-    <Route path="/LoginPage" component = {LoginPage}/>
-    <Route path="/RegisterPage" component = {RegisterPage}/>
-    </Switch>
+
  
 <div className="grid-container">
         <header className="row">
@@ -46,7 +42,8 @@ function App () {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/tempPage">Temp Page</Link></li>
           <li><Link to="/Compare">Compare</Link></li>
-          <li><Link to="/Products">Products</Link></li>
+         
+          <li><Link to="/Payment">Payment</Link></li>
         </ul>
       </nav>
     
@@ -54,11 +51,18 @@ function App () {
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center"> All Rights Reserved</footer>
+        <Switch>
+    <Route path="/Compare" component = {Compare}/>
+    <Route path="/LoginPage" component = {LoginPage}/>
+    <Route path="/RegisterPage" component = {RegisterPage}/>
+    <Route path="/Payment" component = {Payment}/>
+    </Switch>
+        
       </div>
  
-    
+      <footer className="row center"> All Rights Reserved</footer>
   </Router>
+  
 )
 }
 
