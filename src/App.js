@@ -28,10 +28,9 @@ function App () {
     <Route path="/" exact component = {HomeScreen}/>
     <Route path="/tempPage" component = {tempPage}/>
     <Route path="/Compare" component = {Compare}/>
- 
     <Route path="/LoginPage" component = {LoginPage}/>
     <Route path="/RegisterPage" component = {RegisterPage}/>
-    
+
     </Switch>
  
 <div className="grid-container">
@@ -52,10 +51,16 @@ function App () {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/tempPage">Temp Page</Link></li>
           <li><Link to="/Compare">Compare</Link></li>
-          
+          <li><Link to="/LoginPage">Log in</Link></li>
+        
         </ul>
       </nav>
-    
+    <Switch>
+    <Route path="/" exact component = {HomeScreen}/>
+    <Route path="/tempPage" component = {tempPage}/>
+    <Route path="/Compare" component = {Compare}/>
+
+    </Switch>
     </div>
           <Route path="/product/:id" component={ProductScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
@@ -90,3 +95,4 @@ function App(){
 }
 */
 export default App;
+ 
