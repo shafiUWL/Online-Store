@@ -4,6 +4,9 @@ import StripeCheckout from 'react-stripe-checkout';
 
 function Payment() {
 
+    /**Tokens allow the server to deal with personal
+     * and banking details securely are temporary.
+     */
 const onToken = (token) => {
 console.log(token);
 }
